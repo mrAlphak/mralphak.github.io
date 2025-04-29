@@ -10,9 +10,16 @@
   <a href="dioulatcheDriver://recruitment/42">Ouvrir l'application</a>
 
   <script>
+    // Fonction pour tenter d'ouvrir l'app via le URL scheme
     setTimeout(function() {
-      window.location = "dioulatcheDriver://recruitment/42";  // Redirige vers le scheme
-    }, 100);
+      // Tente de rediriger vers l'app via le scheme personnalisé
+      window.location = "dioulatcheDriver://recruitment/42";
+    }, 100);  // Lancement immédiat du scheme après 100 ms
+
+    // Si l'app n'est pas trouvée, redirige vers le Play Store après un délai
+    setTimeout(function() {
+      window.location = "https://play.google.com/store/apps/details?id=io.dioulatcheDriver"; // Remplace par le package de ton app
+    }, 1500);  // Si l'app n'est pas ouverte dans 1.5 secondes, redirection vers Play Store
   </script>
 </body>
 </html>
