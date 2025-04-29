@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection vers l'application</title>
+</head>
+<body>
+  <h1>Cliquer sur le lien pour ouvrir l'application</h1>
+  <a href="dioulatcheDriver://recruitment/42">Ouvrir l'application</a>
+
+  <script>
+    setTimeout(function() {
+      window.location = "dioulatcheDriver://recruitment/42";  // Redirige vers le scheme
+    }, 100);
+  </script>
+</body>
+</html>
